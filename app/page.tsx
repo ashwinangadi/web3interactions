@@ -1,4 +1,7 @@
 "use client";
+import AddNumbers from "@/components/AddNumbers";
+import { WriteContract } from "@/components/WriteContract";
+import ReadContract from "@/components/ReadContract";
 import { ChainIcon, ConnectKitButton, useChains } from "connectkit";
 import { useAccount } from "wagmi";
 
@@ -19,11 +22,16 @@ export default function Home() {
 
       <p>This dApp is supported on the following chains:</p>
       {chains.map((chain) => (
-        <div key={chain.id}>
+        <div key={chain.id} className="flex items-center gap-2">
           <ChainIcon id={chain.id} />
           <span>{chain.name}</span>
         </div>
       ))}
+
+      {/* <SendTransaction /> */}
+      <ReadContract />
+      <AddNumbers a={3} b={2} />
+      <WriteContract />
     </main>
   );
 }

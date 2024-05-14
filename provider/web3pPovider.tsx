@@ -7,7 +7,7 @@ import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 const config = createConfig(
   getDefaultConfig({
     // Your dApps chains
-    chains: [mainnet],
+    chains: [arbitrumSepolia],
     ssr: true,
     transports: {
       // RPC URL for each chain
@@ -20,7 +20,7 @@ const config = createConfig(
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
 
     // Required App Info
-    appName: "Your App Name",
+    appName: "web3Intractions",
 
     // Optional App Info
     appDescription: "Your App Description",
