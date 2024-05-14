@@ -14,7 +14,6 @@ export default function ReadContract() {
   } = useReadContract({
     ...wagmiContractConfig,
     functionName: "getPrivateString",
-    // args: [69n],
   });
 
   if (isPending) return <div>Loading...</div>;
